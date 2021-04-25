@@ -1,12 +1,18 @@
 PACE/Github Assignment Part 2(initial plan)
 written by: 
 -Daniel Shelton
--
+-Julie Jackson
 -
 4/25/2021
 
 Data Structures Needed:
 
+	Struct for the array
+		struct BoardType {
+                  static const int MAX_SIZE = 10;
+           	  int board[MAX_SIZE][MAX_SIZE];
+                  int numCount;
+       		 };
 
 
 Functions Needed/PseudoCode:
