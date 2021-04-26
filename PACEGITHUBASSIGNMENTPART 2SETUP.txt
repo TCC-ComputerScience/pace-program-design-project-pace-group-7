@@ -132,11 +132,11 @@ Functions Needed/PseudoCode:
 		
 	
 
-
-
-
+	
 int main(){
-	int grid[10][10];	
+	Boardtype board;
+	int guessRow, guessCol;
+
 	initalize the grid
 	
 	setBoat(. etc		// set all boats on the grid
@@ -148,6 +148,23 @@ int main(){
 	
 	cout << "Hello .... etc
 	-show rules
-	
-	
+
+	do {
+		// prompt user to guess a location
+		cout << "Guess first location: ";
+		cin >> guessRow >> guessCol;
+
+		// Call ____ function
+		found =
+
+        	if (found)
+           		// change the array to have 'H' for hit
+       		else
+            		// change the array to have '.' for miss
+  	 }
+   	 while(!found);
+
+    	return 0;
+
 }
+
