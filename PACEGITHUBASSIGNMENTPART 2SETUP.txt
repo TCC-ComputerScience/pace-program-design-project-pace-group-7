@@ -37,6 +37,9 @@ Functions Needed/PseudoCode:
 		-destroyer 2 hits
 		
 /////////pseudocode\\\\\\\\\\
+
+	pre:boatsize, boatdirection, 
+	post: checked if placement of boat is clear of another boat, boatplaced, coordinates of boat set
 	(PlaceBoat)Function for Boat random boat placement
 		-places individual boats onto the grid
 		-randomly pick direct to place boat
@@ -48,11 +51,16 @@ Functions Needed/PseudoCode:
 		-check to make sure boat placement isn't overlapping antoher boats location
 		-place boat on the grid
 		-create the boat object
+		
+	pre:boatsize, 
+	post:direction boat is facing either horizontally or vertically
 	(GetDirection)Function to randomly put the direction of the boats for placement:
 		-if (d>4)
 			return 'h'
 		-else
 			return 'v'
+	pre:init board, print board
+	post:
 	(EditGrid)Function that puts numbers tht correspond to the boat type on the grid;
 		-if(dir=='h')
         		for(int i=0; i<BoatSize; i++)
@@ -66,6 +74,8 @@ Functions Needed/PseudoCode:
             			cout << endl;
     		-else
         		cout << "Error!  No direction passed" << endl;
+	pre:boat size, boat direction
+	post:checks if boat overlaps another boat 
 	(SpaceCheck)Function to check  the grid to make sure none of the boats overlap
 			int check=0;
    		if(d=='h')
@@ -80,12 +90,18 @@ Functions Needed/PseudoCode:
                 if(check!=0)
                     return 1;
 		  return 0;
+		  
+	pre:boat size, boat direction, checkspace
+	post:if boat is within the grid and theres space boat is placed
 	(ResetColomnAndRow)Functino to make random column/row based on boat size so we don't go over the edge of the grid
 		-switch statements for each boat with if/elses
-	
+		
+	pre:boat size, 
+	post:makes all occurences of the type of boat that can occur
 	(BoatInfo)Function that makes the boat objects
 		-makes a horzontal/vertical verions of all 5 types of boats
-	
+	pre:boats placed, save corrdinates to boat 
+	post:have user guess all locations of boat
 	(PlayTheGame)Function to play the game
 		-init all values to 0
 		-a large switch statement that runs the program
@@ -93,16 +109,24 @@ Functions Needed/PseudoCode:
 			-says if you have already guessed there
 			-when guess makes a hit checks with boat is hit
 			-when all boats are hit games thanks you for playing then ends the games
+			
+	pre:
+	post:checks if user guesses are hits to the boat spaces on the grid
 	(SetIfHit)Function to set if boat is hit or not
 		-hits++
-
+	pre:size of boat, boat placement,
+	post:checks if user has guessed  all of the slots of a boat
 	(CheckIfSunk)Function to check if sunk or not
 		-if hits are greater or equal to boat size
 			return yes
 		-else
 			return no
+	pre:boat placed
+	post:coordinates of a boat in the grid
 	(BoatCoordinates)Function to get boat coordinates after the have been placed by the random placing functions for the guessing to compare against
 		-
+	pre:guessed boat
+	post:gets the rest of the boat that the guessed if hit to determine how much"health" the hit boat has 
 	(GetBoat)Function to link bombed boat sections to coordinating boat
 		-
 		
