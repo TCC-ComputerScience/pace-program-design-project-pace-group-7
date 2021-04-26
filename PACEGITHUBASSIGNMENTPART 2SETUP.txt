@@ -1,18 +1,17 @@
 PACE/Github Assignment Part 2(initial plan)
 written by: 
 -Daniel Shelton
--Julie Jackson
+-
 -
 4/25/2021
 
 Data Structures Needed:
 
-	Struct for the array
-		struct BoardType {
+struct BoardType {
                   static const int MAX_SIZE = 10;
-           	  int board[MAX_SIZE][MAX_SIZE];
+                 int board[MAX_SIZE][MAX_SIZE];
                   int numCount;
-       		 };
+                };
 
 
 Functions Needed/PseudoCode:
@@ -95,6 +94,18 @@ Functions Needed/PseudoCode:
 			-says if you have already guessed there
 			-when guess makes a hit checks with boat is hit
 			-when all boats are hit games thanks you for playing then ends the games
+	(setHit)Function to set if boat is hit or not
+		-hits++
+
+	(checkSunk)Function to check if sunk or not
+		-if hits are greater or equal to boat size
+			return yes
+		-else
+			return no
+	(boatCoordinates)Function to get boat coordinates after the have been placed by the random placing functions for the guessing to compare against
+		-
+	(getBoat)Function to link bombed to find particular coordinating boat
+		-
 		
 	
 
