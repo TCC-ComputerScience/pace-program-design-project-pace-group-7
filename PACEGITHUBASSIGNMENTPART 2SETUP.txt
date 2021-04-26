@@ -8,10 +8,10 @@ written by:
 Data Structures Needed:
 
 struct BoardType {
-                  static const int MAX_SIZE = 10;
-                 int values[MAX_SIZE][MAX_SIZE];
-                  int numCount;
-                };
+      static const int MAX_SIZE = 10;
+      char values[MAX_SIZE][MAX_SIZE];
+      int numCount;
+};
 
 
 Functions Needed/PseudoCode:
