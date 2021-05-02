@@ -47,6 +47,16 @@ Void InitGrid(allShips[5], fullBoard[][10])			// Initialize grid for board      
   }
 }
 
+Void displayBoard(guessBoard[][10])				// Displays guessed locations
+{
+  for(row equals zero; row is less than 10; row increment by one)
+  {
+    for(column equals zero; column is less than 10; column increment by one)
+    {
+        display guessBoard[row][column] to screen
+    }
+  }
+}
 
 
 
