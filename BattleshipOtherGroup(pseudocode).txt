@@ -30,3 +30,37 @@ While (winCount < 17)					// Loop Until you win
 {Attack(fullBoard[][10], guessBoard[][10], allShips[5]);	// Declare Attack, Update 
 displayBoard(guessBoard[][10], winCount);} 		// Display Guess Board
 // If winCount = 17 display FullBoard
+
+
+
+
+***************FUNCTION PSEUDOCODE********************
+
+Void InitGrid(allShips[5], fullBoard[][10])			// Initialize grid for board                       // We could expand the Void InitBoard(allShips[5], fullBoard[][10]) since                                                                                                           theres like 5 functions that it should be split into 
+{
+  for(column equals zero, column less than ten; column increment one)//Outer column loop
+  {
+    for(row equals zero, row less than ten; row increment one)//inner column loop
+    {
+                  fullBoard[column][row] equals zero;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
