@@ -1,0 +1,32 @@
+Battleship Plan
+
+Data Structures
+Char Fullboard [10][10];               // The Board
+Bool Guessboard[10][10];	// Only the part of the board guessed
+
+Struct Ships{			// Holds Ship Info
+string Ship;			// Name
+Int  Durability;};			// Counter until destroyed
+
+Ships allShips[5];		// Array of all Ships
+
+Functions
+
+Void InitBoard(allShips[5], fullBoard[][10])			// Initialize Board
+Post: Ships have valid locations in/on fullBoard	
+
+Pre: Ships have been assigned locations
+Char Attack (fullBoard[][10], guessBoard[][10], allShips[5])	// Declare attack, test hit, update arrays
+Post: Guessed location has been revealed on guessBoard and if there was a hit then ship durability is reduced and win counter is incremented
+
+Pre: guessBoard has been updated with latest attack
+Void displayBoard(guessBoard[][10])				// Displays guessed locations
+Post: Board of ALL GUESSES had been displayed
+
+Main(){
+Int winCount = 0;					// Initialize Win Counter
+InitBoard(Ships, fullBoard[][10]);			// Initialize Board
+While (winCount < 17)					// Loop Until you win
+{Attack(fullBoard[][10], guessBoard[][10], allShips[5]);	// Declare Attack, Update 
+displayBoard(guessBoard[][10], winCount);} 		// Display Guess Board
+// If winCount = 17 display FullBoard
